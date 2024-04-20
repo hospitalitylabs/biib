@@ -30,15 +30,15 @@ const CardComponent: React.FC<CardProps> = ({ imageUrl, name, location, bedrooms
           </div>
           <div className="propertyDetails">
   <div className="detailItem">
-  <img src="https://img.icons8.com/pastel-glyph/24/null/bath--v2.png" alt="Bathroom Icon" />
+  <img src="/img/bed-65.png" alt="Bedroom Icon" style={{ width: '25px', height: '25px' }}/>
     <p>{bedrooms}</p>
   </div>
   <div className="detailItem">
-    <img src="https://img.icons8.com/pastel-glyph/24/null/bath--v2.png" alt="Bathroom Icon" />
+    <img src="/img/bathroom-3.png" alt="Bathroom Icon" style={{ width: '25px', height: '25px', marginLeft: '1rem' }}/>
     <p>{bathrooms}</p>
   </div>
   <div className="detailItem">
-    <img src="https://img.icons8.com/pastel-glyph/24/null/bath--v2.png" alt="Occupancy Icon" />
+    <img src="/img/people-9.png" s alt="Occupancy Icon" style={{ width: '25px', height: '25px', marginLeft: '1rem' }}/>
     <p>{occupancy}</p>
   </div>
 </div>
