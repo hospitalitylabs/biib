@@ -30,7 +30,7 @@ const CardComponent: React.FC<CardProps> = ({ imageUrl, location, bedrooms, bath
           <div className="flex justify-between">
             <h5 className="textTitle">{location}</h5>
           </div>
-          <div class="propertyDetails">
+          <div className="propertyDetails">
   <div className="detailItem">
   <img src="https://img.icons8.com/pastel-glyph/24/null/bath--v2.png" alt="Bathroom Icon" />
     <p>{bedrooms}</p>
