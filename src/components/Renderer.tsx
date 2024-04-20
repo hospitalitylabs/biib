@@ -1,4 +1,5 @@
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import CardComponent from 'src/components/CardComponent';  // Adjust path if necessary
 
 import _components from "data/components";
 import { Button } from "src/components/Button";
@@ -7,6 +8,7 @@ import Image from "src/components/Image";
 
 const components = {
   Button,
+  CardComponent,
 
   img: Image,
   h1: createHeadingComponent(1),

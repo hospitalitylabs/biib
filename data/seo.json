@@ -1,10 +1,10 @@
 {
-  "title": "Cole Gawin's lynk",
-  "description": "full-stack developer/designer & technical writer",
+  "title": "ELP Book it in bio",
+  "description": "Luxury Destin & 30A Vacation Rentals",
   "additionalLinkTags": [
     {
       "rel": "icon",
-      "href": "favicon.png"
+      "href": "/img/header.webp"
     }
   ]
 }

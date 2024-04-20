@@ -32,12 +32,9 @@ export default function Home({ source }: _Props) {
     <>
       <NextSeo {...seo} />
       <div className={"wrapper"}>
-        <div className={"content"}>
-          <div id={"lynk-instance"}>
+          <div id={"pmc-listing"}>
             <Renderer>{source}</Renderer>
           </div>
-          <Credits />
-        </div>
         <style jsx global>{``}</style>
       </div>
     </>
