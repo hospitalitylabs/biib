@@ -82,7 +82,8 @@
 .propertyDetails {
   display: flex;
   align-items: center; // Ensures vertical centering of children
-
+  margin-top: 10px;
+  
   .detailItem {
     display: flex;
     align-items: center; // Aligns the image and text vertically

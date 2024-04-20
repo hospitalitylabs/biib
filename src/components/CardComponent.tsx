@@ -1,20 +1,17 @@
 
 import React from 'react';
 import '../styles/components/CardComponent.module.scss';
-import { FaBed } from "react-icons/fa";
-import { FaBath } from "react-icons/fa";
-import { BsPeopleFill } from "react-icons/bs";
 
 interface CardProps {
   imageUrl: string;
+  name: string;
   location: string;
   bedrooms: string;
   bathrooms: string;
   occupancy: string;
-  priceInfo: string;
 }
 
-const CardComponent: React.FC<CardProps> = ({ imageUrl, location, bedrooms, bathrooms, occupancy, priceInfo }) => {
+const CardComponent: React.FC<CardProps> = ({ imageUrl, name, location, bedrooms, bathrooms, occupancy }) => {
   return (
     <div className="cardContainer">
          <div className="innerContainer">
@@ -28,6 +25,7 @@ const CardComponent: React.FC<CardProps> = ({ imageUrl, location, bedrooms, bath
         </div>
         <div className="cardContent">
           <div className="flex justify-between">
+            <h3 className="textTitle">{name}</h3>
             <h5 className="textTitle">{location}</h5>
           </div>
           <div className="propertyDetails">
@@ -44,9 +42,7 @@ const CardComponent: React.FC<CardProps> = ({ imageUrl, location, bedrooms, bath
     <p>{occupancy}</p>
   </div>
 </div>
-
-          <h5 className="textTitle">{priceInfo}</h5>
-        </div>
+</div>
       </div>
       </div>
       </div>
