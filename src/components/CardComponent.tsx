@@ -38,7 +38,7 @@ const CardComponent: React.FC<CardProps> = ({ imageUrl, name, location, bedrooms
     <p>{bathrooms}</p>
   </div>
   <div className="detailItem">
-    <img src="/img/people-9.png" s alt="Occupancy Icon" style={{ width: '25px', height: '25px', marginLeft: '1rem' }}/>
+    <img src="/img/people-9.png" alt="Occupancy Icon" style={{ width: '25px', height: '25px', marginLeft: '1rem' }}/>
     <p>{occupancy}</p>
   </div>
 </div>
