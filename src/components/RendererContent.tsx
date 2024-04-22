@@ -18,6 +18,6 @@ const components = {
   ..._components,
 };
 
-export default function Renderer({ children: source }: { children: MDXRemoteSerializeResult }) {
+export default function RendererContent({ children: source }: { children: MDXRemoteSerializeResult }) {
   return <MDXRemote {...source} components={components} />;
 }
