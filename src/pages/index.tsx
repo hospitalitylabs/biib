@@ -67,7 +67,7 @@ export default function Home({ contentSource, listingsSource }: _Props) {
             <SplideSlide key={index}>
           <CardComponent
             key={index}
-            imageUrl={card.imageUrl}
+            imageUrls={card.imageUrls}
             name={card.name}
             location={card.location}
             bedrooms={card.bedrooms}
@@ -78,6 +78,7 @@ export default function Home({ contentSource, listingsSource }: _Props) {
           </SplideSlide>
         ))}
 </Splide>
+<RendererListings>{listingsSource}</RendererListings>
         </div>
         <style jsx global>{``}</style>
       </div>

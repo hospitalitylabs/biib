@@ -1,9 +1,11 @@
 
 import React from 'react';
 import '../styles/components/CardComponent.module.scss';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 
 interface CardProps {
-  imageUrl: string;
+  imageUrls: string[];
   url: string;
   name: string;
   location: string;
@@ -12,16 +14,27 @@ interface CardProps {
   occupancy: string;
 }
 
-const CardComponent: React.FC<CardProps> = ({ imageUrl, url, name, location, bedrooms, bathrooms, occupancy }) => {
+const CardComponent: React.FC<CardProps> = ({ imageUrls = [], url, name, location, bedrooms, bathrooms, occupancy }) => {
   return (
     <div className="cardContainer">
          <div className="innerContainer">
         <div className="cardWrapper">
-        <a href={url} target="_blank"> 
         <div className="card">
     <div className="cardImage" >
-    <img src={imageUrl} alt="" style={{ width: "100%", height: "auto" }} />
+    <Splide
+          options={{
+            arrows: Array.isArray(imageUrls) && imageUrls.length > 1, // Show arrows only if there are multiple images
+            pagination: false,
+          }}
+        >
+          {imageUrls.map((url, index) => (
+            <SplideSlide key={index}>
+              <img src={url} alt={`${name} image ${index + 1}`} style={{ width: "100%", height: "auto" }} />
+            </SplideSlide>
+          ))}
+        </Splide>
     </div>
+    <a href={url} target="_blank" style={{ textDecoration: 'none' }}> 
     <div className="location"> {location} </div>
     <div className="name"> {name}
     <div className="propertyDetails">
@@ -38,9 +51,8 @@ const CardComponent: React.FC<CardProps> = ({ imageUrl, url, name, location, bed
     <p>{occupancy}</p>
   </div>
 </div>
-    </div>
-</div>
-</a>
+    </div></a>
+</div> 
       </div>
       </div>
     </div>

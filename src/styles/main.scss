@@ -37,35 +37,6 @@ body,
 
 #pmc-listing {
   display: inline;
-
-  p {
-    line-height: 1.3rem;
-    padding: 0 .5rem;
-  }
-
-  li {
-    padding-left: 2rem;
-    position: relative;
-
-    &::before {
-      content: "•";
-      font-size: 1.25rem;
-      position: absolute;
-    }
-
-    p {
-      padding-left: 1.25rem;
-    }
-  }
-
-  strong {
-    font-weight: 600;
-  }
-
-  a:not(.btn) {
-    opacity: 1;
-    color: currentColor;
-  }
 }
 
 hr {
